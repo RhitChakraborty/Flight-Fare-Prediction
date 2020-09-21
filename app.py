@@ -36,7 +36,7 @@ Arrival_min=int(arr_time.minute)
 # Duration
 duration_hour = abs(Arrival_hour - dep_hour)
 duration_min = abs(Arrival_min - dep_min)
-duration=time(duration_hour,duration_min)
+duration=datetime.time(duration_hour,duration_min)
 #st.write(duration,duration_hour,duration_min)
 
 # Total Stops
