@@ -6,7 +6,7 @@ Created on Mon Sep 21 19:40:35 2020
 """
 
 import streamlit as st
-from datetime import datetime
+from datetime import datetime,date,time
 import datetime
 import pickle
 import pandas as pd
@@ -18,17 +18,17 @@ st.write("""
     
 st.header('User Input Parameters')
 
-dep_date = st.sidebar.date_input('Departure date',min_value=datetime.date(2020,9,21))
+dep_date = st.sidebar.date_input('Departure date',min_value=datetime.date(2020,9,22))
 journey_day = int(dep_date.day)
 journey_month = int(dep_date.month)
 #st.write(journey_day,journey_month)
 
-dep_time=st.sidebar.slider('Departure time',datetime.time(00,00),datetime.time(23,59))
+dep_time=st.sidebar.slider('Departure time',datetime.time(05,30),datetime.time(05,29))
 dep_hour=int(dep_time.hour)
 dep_min=int(dep_time.minute)
 #st.write("You're scheduled for:", dep_time)
 
-arr_time=st.sidebar.slider('Arrival time',dep_time,datetime.time(23,59))
+arr_time=st.sidebar.slider('Arrival time',datetime.time(05,30),datetime.time(05,29))
 Arrival_hour=int(arr_time.hour)
 Arrival_min=int(arr_time.minute)
 #st.write("You will arrive at:", arr_time)
