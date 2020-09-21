@@ -1,3 +1,4 @@
+python==3.7.7
 streamlit
 gunicorn==20.0.4
 Jinja2==2.11.2
@@ -8,3 +9,4 @@ datetime
 virtualenv==20.0.7
 Werkzeug==1.0.1
 wincertstore==0.2
+scikit-learn
