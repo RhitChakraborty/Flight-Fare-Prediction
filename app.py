@@ -352,5 +352,4 @@ fare=model.predict([[
 fare=round(fare[0],2)
 st.write("""
          ## The expected fare is Rs.""",fare)
-         
-st.balloons()
+
