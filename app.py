@@ -6,7 +6,7 @@ Created on Mon Sep 21 19:40:35 2020
 """
 
 import streamlit as st
-from datetime import datetime
+import datetime
 import pickle
 import pandas as pd
 
