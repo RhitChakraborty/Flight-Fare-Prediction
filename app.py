@@ -6,7 +6,7 @@ Created on Mon Sep 21 19:40:35 2020
 """
 
 import streamlit as st
-from datetime import datetime,date,time
+from datetime import datetime
 import datetime
 import pickle
 import pandas as pd
@@ -23,12 +23,12 @@ journey_day = int(dep_date.day)
 journey_month = int(dep_date.month)
 #st.write(journey_day,journey_month)
 
-dep_time=st.sidebar.slider('Departure time',time(00,00),time(23,59))
+dep_time=st.sidebar.slider('Departure time',datetime.time(00,00),datetime.time(23,59))
 dep_hour=int(dep_time.hour)
 dep_min=int(dep_time.minute)
 #st.write("You're scheduled for:", dep_time)
 
-arr_time=st.sidebar.slider('Arrival time',dep_time,time(23,59))
+arr_time=st.sidebar.slider('Arrival time',dep_time,datetime.time(23,59))
 Arrival_hour=int(arr_time.hour)
 Arrival_min=int(arr_time.minute)
 #st.write("You will arrive at:", arr_time)
